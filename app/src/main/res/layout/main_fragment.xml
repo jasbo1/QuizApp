@@ -5,27 +5,71 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".main.MainFragment">
+
     <TextView
+        style="@style/TitleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       style="@style/TitleText"
         android:text="Quiz" />
 
-
-    <Button
-        android:id="@+id/btn_add"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="300sp"
-        android:text="+" />
+        android:layout_marginStart="160sp"
+        android:layout_marginTop="80sp"
+        android:src="@drawable/ic_ar_tut" />
 
-    <Button
-        android:id="@+id/btn_less"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="-" />
+        style="@style/SimpleText"
+        android:text="Question amount"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="60sp"
+        android:max="200"
+        android:progress="100"
+        android:background="@drawable/seekbar_primary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SimpleText"
+        android:text="Category"/>
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="40sp"
+        android:layout_marginStart="60sp"
+        android:layout_marginEnd="60sp"
+        android:layout_marginTop="8sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SimpleText"
+        android:text="Difficulty"/>
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="40sp"
+        android:layout_marginStart="60sp"
+        android:layout_marginEnd="60sp"
+        android:layout_marginTop="8sp"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="80sp"
+        android:layout_marginEnd="80sp"
+        android:text="START"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_primary_btn"
+        />
 
 
 </LinearLayout>

@@ -36,22 +36,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        button_add = view.findViewById(R.id.btn_add);
-        button_min = view.findViewById(R.id.btn_less);
 
-        button_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mViewModel.countIncrement();
-            }
-        });
-        button_min.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mViewModel.counterDeCrement();
-                    }
-                });
     }
 
     @Override
