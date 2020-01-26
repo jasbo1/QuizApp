@@ -20,9 +20,7 @@ import com.geektech.quizapp_gt_4_2.R;
 public class MainFragment extends Fragment {
 
     private MainViewModel mViewModel;
-    //SSSSSSSS
-    private Button button_add, button_min;
-
+    private Button btn_start;
     public static MainFragment newInstance() {
         return new MainFragment();
     }
@@ -37,6 +35,13 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        btn_start = view.findViewById(R.id.btn_start);
+        btn_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 
