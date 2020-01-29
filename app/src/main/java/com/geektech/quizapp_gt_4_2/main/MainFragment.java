@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.geektech.quizapp_gt_4_2.R;
 
@@ -21,6 +23,9 @@ public class MainFragment extends Fragment {
 
     private MainViewModel mViewModel;
     private Button btn_start;
+    private SeekBar seekBar;
+    private TextView textView;
+
     public static MainFragment newInstance() {
         return new MainFragment();
     }
@@ -35,6 +40,26 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        seekBar = view.findViewById(R.id.seekBar);
+        textView = view.findViewById(R.id.tvAmount);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                textView.setText(String.valueOf(progress));
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
         btn_start = view.findViewById(R.id.btn_start);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override

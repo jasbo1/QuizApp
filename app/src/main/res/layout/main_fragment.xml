@@ -19,60 +19,79 @@
         android:layout_marginTop="80sp"
         android:src="@drawable/ic_ar_tut" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
         style="@style/SimpleText"
-        android:text="Question amount"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question amount:" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            style="@style/SimpleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/black"
+            android:layout_marginStart="10sp"/>
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="45sp"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="60sp"
+        android:background="@drawable/seekbar_primary"
         android:max="200"
         android:progress="100"
-        android:background="@drawable/seekbar_primary"/>
+
+        android:progressTint="@color/purple" />
 
     <TextView
+        style="@style/SimpleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/SimpleText"
-        android:text="Category"/>
+        android:text="Category" />
 
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="40sp"
         android:layout_marginStart="60sp"
-        android:layout_marginEnd="60sp"
         android:layout_marginTop="8sp"
-        android:entries="@array/categories"/>
+        android:layout_marginEnd="60sp"
+        android:entries="@array/categories" />
+
     <TextView
+        style="@style/SimpleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/SimpleText"
-        android:text="Difficulty"/>
+        android:text="Difficulty" />
 
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="40sp"
         android:layout_marginStart="60sp"
-        android:layout_marginEnd="60sp"
         android:layout_marginTop="8sp"
-        android:entries="@array/difficulties"/>
+        android:layout_marginEnd="60sp"
+        android:entries="@array/difficulties" />
 
     <Button
         android:id="@+id/btn_start"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40sp"
         android:layout_marginStart="80sp"
+        android:layout_marginTop="40sp"
         android:layout_marginEnd="80sp"
-        android:text="START"
-        android:textColor="@color/white"
         android:background="@drawable/bg_primary_btn"
-        />
+        android:text="START"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>
