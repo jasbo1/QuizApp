@@ -46,7 +46,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-                textView.setText(String.valueOf(progress));
+                textView.setText(String.valueOf(progress));//
 
             }
 
